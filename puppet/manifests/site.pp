@@ -7,6 +7,7 @@ $puppet_header = "DPP/Puppet managed file at location $location, DO NOT EDIT BY 
 
 node default {
     include puppet
+    include dpkg
     file { "/tmp/i_am_puppet":
         content => "DPP: puppet ver $puppetversion on $hostname; facter ver $facterversion",
     }
